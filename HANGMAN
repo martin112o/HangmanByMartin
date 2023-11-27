@@ -380,7 +380,7 @@ class Program
         string[] words = ReadWordsFromFile();
         Console.CursorVisible = false;
         const char Underscore = '_';
-        bool inputIsInvalid;
+        
 
         while (true)
         {
@@ -408,7 +408,7 @@ class Program
         {
             string curDirectory = Directory.GetCurrentDirectory();
             string projDirectory = Directory.GetParent(curDirectory).Parent.Parent.FullName;
-            const string WordsFileName = "";
+            const string WordsFileName = "words.txt";
             string path = $@"{projDirectory}\{WordsFileName}";
             string[] words = File.ReadAllLines(path);
             return words;
